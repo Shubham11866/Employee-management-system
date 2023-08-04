@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+<style>
+	body{
+		background-color: #387fdc;
+	}
+	.main{
+		padding:70px 0;
+	}
+	.form_container{
+		background-color: #f1f1f1;
+		padding:0px ;
+	}
+	.form-main{
+		padding:40px 70px;
+	}
+	.form-head{
+		padding:30px 30px 10px 30px;
+	}
+	/* Add styles for the navbar */
+    .navbar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .navbar a {
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+</style>
+</head>
+<body>
+	<div class="container main">
+		<div class="row row-cols-md-2">
+		<div>
+			<img src="Images/businessman-working-on-laptop.png" alt="" class="img-fluid">
+		</div>
+		<div class="form_container">
+			<div class="bg-dark form-head">
+				<h1 class="fw-bold mb-4 text-light">Add Employee Form</h1>
+			</div>
+			<form action="EmpInsert" method="post" class="form-main">
+				<input required class="w-100 p-2 mb-3" type="text" placeholder="Employee Name" name="emp1">
+				<input required class="w-100 p-2 mb-3" type="text" placeholder="Employee Email" name="emp2">
+				<input required class="w-100 p-2 mb-3" type="text" placeholder="Employee Phone.no" name="emp3">
+				<input required class="w-100 p-2 mb-3" type="text" placeholder="Employee Birth-date" name="emp4">
+				<input required class="w-100 p-2 mb-3" type="text" placeholder="Employee Address" name="emp5">
+				<select id="gender" name="emp6" required class="form-select mb-3">
+				<option value="Gender">Select Gender</option>
+            		<option value="Male">Male</option>
+            		<option value="Female">Female</option>
+            		<option value="Other">Other</option>
+        		</select>
+				<input required class="w-100 p-2 mb-3" type="text" placeholder="Employee Adhaar.no" name="emp7">
+				<input required class="w-100 p-2 mb-3" type="text" placeholder="Employee Pan.no" name="emp8">
+				<input required class="w-100 p-2 mb-3" type="text" placeholder="Employee Department ID" name="emp9">
+				<input required class="w-100 p-2 mb-3" type="text" placeholder="Employee Username" name="emp10">
+				<input required class="w-100  p-2 mb-4" type="text" placeholder="Employee Password" name="emp11">
+				<button id="myButton" class="btn btn-primary" type="submit">Create Account</button>
+			</form>
+		</div>
+	</div>
+	<!-- Navbar -->
+  <div class="navbar p-0">
+    <a href="index.html">Home</a>
+    <a href="LoginPage.html">Logout</a>
+    <a href="#contact">Contact Us</a>
+  </div>
+	</div>
+	
+	<script>
+	
+		const button = document.getElementById("myButton");
+
+		button.onclick = function() {
+		  alert("Employee Added Successfully!");
+		};
+
+	</script>
+	
+</body>
+</html>
